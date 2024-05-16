@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Team Builder</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pokemon Team Builder</h1>
+        <input type="text" id="searchInput" placeholder="Search Pokemon...">
+        <button class="botones" onclick="searchPokemon()">Search</button>
+        <div class="team-container">
+            <!-- Team will be displayed here -->
+        </div>
+        <button class="botones" onclick="addPokemon()">Add to Team</button>
+        <button class="botones" onclick="resetTeam()">Reset Team</button>
+        <button class="botones" onclick="showHistory()">View History</button>
+    </div>
+
+    <!-- Modal for history -->
+    <div id="historyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="historyContent"></div>
+        </div>
+    </div>
+
+    <script src="Script.JS"></script>
+</body>
+</html>
+
+
+
