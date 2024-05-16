@@ -7,7 +7,7 @@ function searchPokemon() {
         .then(response => response.json())
         .then(data => {
             const { name, sprites } = data;
-            const pc = Math.floor(Math.random() * 100) + 1; // Random PC for demonstration
+            const pc = Math.floor(Math.random() * 100) + 1; 
             displayPokemon(name, pc, sprites.front_default);
         })
         .catch(error => console.error('Error fetching data:', error));
@@ -25,7 +25,7 @@ function displayPokemon(name, pc, imageUrl) {
     teamContainer.appendChild(pokemonCard);
     team.push({ name, pc, imageUrl });
     if (team.length >= 6) {
-        document.querySelector('button:nth-of-type(1)').disabled = true; // Disable Add to Team button
+        document.querySelector('button:nth-of-type(1)').disabled = true; 
     }
 }
 
@@ -42,7 +42,7 @@ function addPokemon() {
 function resetTeam() {
     team = [];
     document.querySelector('.team-container').innerHTML = '';
-    document.querySelector('button:nth-of-type(1)').disabled = false; // Enable Add to Team button
+    document.querySelector('button:nth-of-type(1)').disabled = false; 
 }
 
 // Esta función crea un elemento HTML para representar un equipo en el historial
