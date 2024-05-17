@@ -45,21 +45,20 @@ function resetTeam() {
     document.querySelector('button:nth-of-type(1)').disabled = false; 
 }
 
-// Esta función crea un elemento HTML para representar un equipo en el historial
 function createTeamElement(teamData, teamIndex) {
     const teamElement = document.createElement('div');
     teamElement.classList.add('team');
     
-    // Agregar el nombre del equipo
+
     const teamName = document.createElement('h2');
     teamName.textContent = `Team ${teamIndex + 1}`;
     teamElement.appendChild(teamName);
     
-    // Establecer el contenedor de los Pokémon del equipo
+
     const pokemonContainer = document.createElement('div');
     pokemonContainer.classList.add('pokemon-container');
     
-    // Mostrar cada Pokémon del equipo horizontalmente
+
     teamData.forEach(pokemon => {
         const pokemonCard = document.createElement('div');
         pokemonCard.classList.add('pokemon-card');
@@ -80,13 +79,12 @@ function showHistory() {
     const historyModal = document.getElementById('historyModal');
     const historyContent = document.getElementById('historyContent');
 
-    // Limpiar cualquier contenido anterior
     historyContent.innerHTML = '';
 
     if (history.length === 0) {
         historyContent.innerText = 'No history available.';
     } else {
-        // Mostrar cada equipo en el historial
+
         history.forEach((teamData, index) => {
             const teamElement = createTeamElement(teamData, index);
             historyContent.appendChild(teamElement);
